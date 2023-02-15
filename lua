@@ -35,7 +35,7 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
-	warn("Failed to load icons")
+	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
@@ -454,11 +454,7 @@ function OrionLib:Init()
 		pcall(function()
 			if isfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt") then
 				LoadCfg(readfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt"))
-				OrionLib:MakeNotification({
-					Name = "Configuration",
-					Content = "Auto-loaded configuration for the game " .. game.GameId .. ".",
-					Time = 5
-				})
+				print("Auto-loaded configuration for the game " .. game.GameId .. ".")
 			end
 		end)		
 	end	
@@ -1731,7 +1727,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	--		end
 	--		OrionLib:MakeNotification({
 	--			Name = "UI Library Available",
-	--			Content = "New UI Library, if you see this contact devs immediately",
+	--			Content = "New UI Library Available - Joining Discord (#announcements)",
 	--			Time = 8
 	--		})
 	--		spawn(function()
@@ -1750,6 +1746,7 @@ function OrionLib:MakeWindow(WindowConfig)
 
 	--			UI:Destroy()
 	--		end)
+	--		writefile("NewLibraryNotification1.txt","The value for the notification having been sent to you.")
 	--	end
 	--end
 	
