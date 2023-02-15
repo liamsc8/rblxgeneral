@@ -25,8 +25,3 @@ if game.PlaceId == 6284583030 then
             })
     end)
 end
-game.StarterGui:SetCore("SendNotification", {
-    Title = "RBLXGeneral | Not Supported";
-    Text = "This game is not supported with this client, this client is for Pet Sim X."; 
-    Duration = 7;
-    })
