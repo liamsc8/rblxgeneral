@@ -52,12 +52,3 @@ if game.PlaceId === 6516141723 then
         end
     end)
 end
-game.StarterGui:SetCore("SendNotification", {
-    Title = "RBLXGeneral | Not Supported";
-    Text = "This game is not supported with this client, this client is for Doors."; 
-    Duration = 7;
-    })
-
-
-
-
